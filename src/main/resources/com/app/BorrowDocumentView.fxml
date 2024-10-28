@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.controller.TransactionController"
+      spacing="15"
+      style="-fx-background-color: white;"
+      prefWidth="400"
+      prefHeight="300">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox alignment="CENTER">
+        <Label text="Borrow Document"
+               style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Form Fields -->
+    <GridPane vgap="15" hgap="10">
+        <padding>
+            <Insets top="20"/>
+        </padding>
+
+        <!-- Document ID Field -->
+        <Label text="Document ID:"
+               style="-fx-font-weight: bold;"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="0"/>
+        <TextField fx:id="documentIdField"
+                   promptText="Enter document ID"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="0"
+                   style="-fx-background-radius: 4;
+                         -fx-border-radius: 4;
+                         -fx-border-color: #dee2e6;
+                         -fx-padding: 8;"/>
+
+        <!-- User ID Field -->
+        <Label text="User ID:"
+               style="-fx-font-weight: bold;"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="1"/>
+        <TextField fx:id="userIdField"
+                   promptText="Enter user ID"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"
+                   style="-fx-background-radius: 4;
+                         -fx-border-radius: 4;
+                         -fx-border-color: #dee2e6;
+                         -fx-padding: 8;"/>
+
+        <!-- Borrow Date Field -->
+        <Label text="Borrow Date:"
+               style="-fx-font-weight: bold;"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="2"/>
+        <DatePicker fx:id="borrowDatePicker"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="2"
+                    style="-fx-background-radius: 4;
+                           -fx-border-radius: 4;
+                           -fx-border-color: #dee2e6;"/>
+
+        <!-- Due Date Field -->
+        <Label text="Due Date:"
+               style="-fx-font-weight: bold;"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="3"/>
+        <DatePicker fx:id="dueDatePicker"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="3"
+                    style="-fx-background-radius: 4;
+                           -fx-border-radius: 4;
+                           -fx-border-color: #dee2e6;"/>
+
+        <!-- Column Constraints -->
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+    </GridPane>
+
+    <!-- Status Message -->
+    <Label fx:id="statusLabel"
+           wrapText="true"
+           style="-fx-text-fill: #28a745;"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Borrow"
+                onAction="#handleBorrowDocumentAction"
+                style="-fx-background-color: #007bff;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-padding: 10 20;
+                       -fx-background-radius: 4;
+                       -fx-cursor: hand;"/>
+
+        <Button text="Cancel"
+                onAction="#handleCancelAction"
+                style="-fx-background-color: #dc3545;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-padding: 10 20;
+                       -fx-background-radius: 4;
+                       -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.controller.UserController"
+      spacing="15"
+      style="-fx-background-color: white;"
+      prefWidth="600"
+      prefHeight="400">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox alignment="CENTER">
+        <Label text="User List"
+               style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- User List -->
+    <ListView fx:id="userListView"
+              VBox.vgrow="ALWAYS"
+              style="-fx-background-color: #f8f9fa;
+                     -fx-background-radius: 5;
+                     -fx-border-color: #dee2e6;
+                     -fx-border-radius: 5;"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Refresh"
+                onAction="#handleGetAllUserAction"
+                style="-fx-background-color: #007bff;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-padding: 10 20;
+                       -fx-background-radius: 4;
+                       -fx-cursor: hand;"/>
+
+        <Button text="Close"
+                onAction="#handleCancelAction"
+                style="-fx-background-color: #dc3545;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-padding: 10 20;
+                       -fx-background-radius: 4;
+                       -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>

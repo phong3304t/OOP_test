@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.controller.DocumentController"
+      spacing="10"
+      style="-fx-background-color: white;"
+      prefWidth="800"
+      prefHeight="600">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox alignment="CENTER">
+        <Label text="All Documents"
+               style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Document List -->
+    <ListView fx:id="documentListView"
+              VBox.vgrow="ALWAYS"
+              style="-fx-background-color: #f8f9fa;
+                     -fx-background-radius: 5;
+                     -fx-border-color: #dee2e6;
+                     -fx-border-radius: 5;"/>
+
+    <!-- Status Label -->
+    <Label fx:id="documentStatusLabel"
+           style="-fx-text-fill: #28a745;"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Refresh"
+                onAction="#handleGetAllDocumentAction"
+                style="-fx-background-color: #007bff;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-padding: 10 20;
+                       -fx-background-radius: 4;
+                       -fx-cursor: hand;"/>
+
+        <Button text="Close"
+                onAction="#handleCancelAction"
+                style="-fx-background-color: #e74c3c;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-padding: 10 20;
+                       -fx-background-radius: 4;
+                       -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>

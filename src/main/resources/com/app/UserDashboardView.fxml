@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.view.gui.UserDashboardController"
+            style="-fx-background-color: #f0f0f0;">
+    <top>
+        <VBox alignment="CENTER" style="-fx-padding: 20 0 30 0;">
+            <ImageView fitHeight="70" fitWidth="70" preserveRatio="true">
+                <Image url="@../images/user_icon.jpg"/>
+            </ImageView>
+            <Label text="User Dashboard"
+                   style="-fx-font-size: 24px;
+                         -fx-font-weight: bold;
+                         -fx-text-fill: #2c3e50;">
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Find Document" fx:id="findDocumentButton" onAction="#handleFindDocumentAction"
+                        style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px; -fx-pref-height: 40px; -fx-background-radius: 5;"/>
+                <Button text="View All Documents" fx:id="viewAllDocumentButton" onAction="#handleViewDocumentsAction"
+                        style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px; -fx-pref-height: 40px; -fx-background-radius: 5;"/>
+            </HBox>
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Borrow Document" fx:id="borrowDocumentButton" onAction="#handleBorrowDocumentAction"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px; -fx-pref-height: 40px; -fx-background-radius: 5;"/>
+                <Button text="Return Document" fx:id="returnDocumentButton" onAction="#handleReturnDocumentAction"
+                        style="-fx-background-color: #16a085; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px; -fx-pref-height: 40px; -fx-background-radius: 5;"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 20;">
+            <Label text="© Team 2 Library Management System"
+                   style="-fx-font-size: 12px;
+                      -fx-text-fill: #2c3e50;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
